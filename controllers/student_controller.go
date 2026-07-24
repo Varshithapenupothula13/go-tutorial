@@ -5,6 +5,7 @@ import (
 
 	"go_tutorial/models"
 	"go_tutorial/utils"
+	"go_tutorial/views"
 )
 
 func GetStudent() {
@@ -15,7 +16,7 @@ func GetStudent() {
 	}
 
 	if utils.IsValidEmail(student.Email) {
-		fmt.Println("Student:", student)
+		views.DisplayStudent(student)
 	} else {
 		fmt.Println("Invalid email")
 	}
